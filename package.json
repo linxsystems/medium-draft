@@ -19,6 +19,9 @@
     "test:unit": "NODE_PATH=src babel-node ./node_modules/.bin/isparta cover _mocha -- --growl --compilers js:babel-core/register,css:test-js/css-null-compiler.js --require ./test-js/test_helper.js $(find src -path '*.spec.js')",
     "test": "npm run test:lint && npm run test:unit"
   },
+  "precommit": [
+    "build"
+  ],
   "keywords": [
     "rich editor",
     "text editor",
