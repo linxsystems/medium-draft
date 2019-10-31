@@ -13,6 +13,7 @@ import CaptionBlock from './components/blocks/caption';
 import AtomicBlock from './components/blocks/atomic';
 import TodoBlock from './components/blocks/todo';
 import ImageBlock from './components/blocks/image';
+import VideoBlock from './components/blocks/video';
 import BreakBlock from './components/blocks/break';
 
 import ImageSideButton from './components/sides/image';
@@ -49,6 +50,7 @@ export {
   AtomicBlock,
   TodoBlock,
   ImageBlock,
+  VideoBlock,
   BreakBlock,
   ImageSideButton,
   BreakSideButton,

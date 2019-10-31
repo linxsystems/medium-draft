@@ -23,6 +23,7 @@ export const Block = {
   TODO: 'todo',
   IMAGE: 'atomic:image',
   BREAK: 'atomic:break',
+  VIDEO: 'atomic:video',
 };
 
 export const Inline = {
