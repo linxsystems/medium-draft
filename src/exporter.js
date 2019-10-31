@@ -65,7 +65,7 @@ export const blockToHTML = (block) => {
       const text = block.text;
       const extraClass = (text.length > 0 ? ' md-block-image-has-caption' : '');
       return {
-        start: `<figure class="md-block-image${extraClass}"><video src="${vidData.src}" /><figcaption class="md-block-image-caption">`,
+        start: `<figure class="md-block-image${extraClass}"><AzureMP src="${vidData.src}" /><figcaption class="md-block-image-caption">`,
         end: '</figcaption></figure>',
       };
     }

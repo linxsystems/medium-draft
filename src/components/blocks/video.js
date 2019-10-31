@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
+import { AzureMP } from 'react-azure-mp';
 import { EditorBlock, EditorState, SelectionState } from 'draft-js';
 
 import { getCurrentBlock } from '../../model/';
@@ -46,7 +46,7 @@ class VideoBlock extends React.Component {
       return (
         <div>
           <div className="md-block-image-inner-container" onClick={this.focusBlock}>
-            <video src={src} />
+            <AzureMP src={src} />
           </div>
           <figcaption {...extraProps}>
             <EditorBlock {...this.props} />
