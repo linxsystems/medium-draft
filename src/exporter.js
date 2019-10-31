@@ -1,4 +1,5 @@
 import React from 'react';
+import { AzureMP } from 'react-azure-mp';
 import { convertToHTML } from 'draft-convert';
 
 import { Inline, Block, Entity } from './util/constants';
@@ -25,6 +26,10 @@ export const styleToHTML = (style) => {
 export const blockToHTML = (block) => {
   const blockType = block.type;
   const blockClass = blockType.toLowerCase();
+  let azure = null;
+  if (blockType === Block.VIDEO) {
+    azure = <AzureMP src={block.data.src} />;
+  }
 
   switch (blockType) {
     case Block.H1:
@@ -61,11 +66,11 @@ export const blockToHTML = (block) => {
       };
     }
     case Block.VIDEO: {
-      const vidData = block.data;
+      // const vidData = block.data;
       const text = block.text;
       const extraClass = (text.length > 0 ? ' md-block-image-has-caption' : '');
       return {
-        start: `<figure class="md-block-image${extraClass}"><AzureMP src="${vidData.src}" /><figcaption class="md-block-image-caption">`,
+        start: `<figure class="md-block-image${extraClass}">${azure}<figcaption class="md-block-image-caption">`,
         end: '</figcaption></figure>',
       };
     }
