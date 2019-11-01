@@ -1,7 +1,6 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 // import './atomic.scss';
-import { AzureMP } from 'react-azure-mp';
-import React from 'react';
 
 const AtomicBlock = (props) => {
   const content = props.getEditorState().getCurrentContent();
@@ -20,7 +19,7 @@ const AtomicBlock = (props) => {
   } else if (type === 'video') {
     return (
       <div className="md-block-atomic-wrapper">
-        <AzureMP src={data.src} />
+        <video src={data.src} />
         <div className="md-block-atomic-controls">
           <button>&times;</button>
         </div>
