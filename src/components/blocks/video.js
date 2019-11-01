@@ -45,7 +45,7 @@ class VideoBlock extends React.Component {
       return (
         <div>
           <div className="md-block-video-inner-container" onClick={this.focusBlock}>
-            <video src={src} />
+            <video width="400" controls><source src={data.src} type="video/mp4" /></video>
           </div>
           <figcaption {...extraProps}>
             <EditorBlock {...this.props} />

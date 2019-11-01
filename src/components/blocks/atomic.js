@@ -19,7 +19,7 @@ const AtomicBlock = (props) => {
   } else if (type === 'video') {
     return (
       <div className="md-block-atomic-wrapper">
-        <video src={data.src} />
+        <video width="400" controls><source src={data.src} type="video/mp4" /></video>
         <div className="md-block-atomic-controls">
           <button>&times;</button>
         </div>
