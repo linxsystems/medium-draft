@@ -26,6 +26,8 @@ export default (block) => {
     }
     case Block.IMAGE:
       return `${BASE_BLOCK_CLASS} ${BASE_BLOCK_CLASS}-image`;
+    case Block.VIDEO:
+      return `${BASE_BLOCK_CLASS} ${BASE_BLOCK_CLASS}-video`;
     case Block.BLOCKQUOTE_CAPTION: {
       const cls = `${BASE_BLOCK_CLASS} ${BASE_BLOCK_CLASS}-quote`;
       return `${cls} md-RichEditor-blockquote ${BASE_BLOCK_CLASS}-quote-caption`;

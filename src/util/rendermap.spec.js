@@ -25,4 +25,10 @@ describe('rendermap', () => {
       element: 'figure',
     });
   });
+
+  it('returns figure for VIDEO', () => {
+    expect(renderMap.get(Block.VIDEO)).to.deep.equal({
+      element: 'figure',
+    });
+  });
 });

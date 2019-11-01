@@ -60,6 +60,14 @@ describe('blockStyleFn()', () => {
       `${BASE_BLOCK_CLASS} ${BASE_BLOCK_CLASS}-image`);
   });
 
+  it('should return block class for VIDEO', () => {
+    const normalBlock = new ContentBlock({
+      type: Block.VIDEO,
+    });
+    expect(blockStyleFn(normalBlock)).to.equal(
+      `${BASE_BLOCK_CLASS} ${BASE_BLOCK_CLASS}-video`);
+  });
+
   it('should return block class for TODO', () => {
     const todoBlock = new ContentBlock({
       type: Block.TODO,

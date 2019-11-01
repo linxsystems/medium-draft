@@ -80,6 +80,14 @@ export const htmlToBlock = (nodeName, node) => {
           src: imageNode && imageNode.src,
         },
       };
+    } else if (node.className.match(/^md-block-video/)) {
+      const vidNode = node.querySelector('video');
+      return {
+        type: Block.VIDEO,
+        data: {
+          src: vidNode && vidNode.src,
+        },
+      };
     } else if (node.className === `md-block-${Block.ATOMIC.toLowerCase()}`) {
       return {
         type: Block.ATOMIC,

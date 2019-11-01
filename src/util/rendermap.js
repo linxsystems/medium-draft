@@ -19,6 +19,9 @@ const RenderMap = Map({
   [Block.IMAGE]: {
     element: 'figure',
   },
+  [Block.VIDEO]: {
+    element: 'figure',
+  },
   [Block.BREAK]: {
     element: 'div',
   },
